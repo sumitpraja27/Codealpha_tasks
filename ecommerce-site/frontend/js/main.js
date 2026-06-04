@@ -43,7 +43,9 @@ async function updateCartCount() {
 function logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    window.location.href = '../index.html';
+    // Determine correct path to index.html based on current page depth
+    const isInPages = window.location.pathname.includes('/pages/');
+    window.location.href = isInPages ? '../index.html' : 'index.html';
 }
 
 // Hamburger menu toggle

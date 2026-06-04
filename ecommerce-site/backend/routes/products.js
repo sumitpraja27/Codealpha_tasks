@@ -13,6 +13,18 @@ router.get('/', (req, res) => {
   });
 });
 
+// Get products by category (must be before /:id to avoid route conflict)
+router.get('/category/:category', (req, res) => {
+  const { category } = req.params;
+
+  db.all('SELECT * FROM products WHERE category = ?', [category], (err, products) => {
+    if (err) {
+      return res.status(500).json({ error: 'Database error' });
+    }
+    res.json(products);
+  });
+});
+
 // Get product by ID
 router.get('/:id', (req, res) => {
   const { id } = req.params;
@@ -27,18 +39,6 @@ router.get('/:id', (req, res) => {
     }
 
     res.json(product);
-  });
-});
-
-// Get products by category
-router.get('/category/:category', (req, res) => {
-  const { category } = req.params;
-
-  db.all('SELECT * FROM products WHERE category = ?', [category], (err, products) => {
-    if (err) {
-      return res.status(500).json({ error: 'Database error' });
-    }
-    res.json(products);
   });
 });
 
