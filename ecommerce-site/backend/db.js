@@ -104,12 +104,12 @@ function initializeDatabase() {
 
 function seedProducts() {
   const products = [
-    { name: 'Laptop', description: 'High-performance laptop', price: 999.99, stock: 10, category: 'Electronics', image_url: 'http://localhost:3000/images/laptop.png' },
-    { name: 'Wireless Mouse', description: 'Ergonomic wireless mouse', price: 29.99, stock: 50, category: 'Electronics', image_url: 'http://localhost:3000/images/mouse.png' },
-    { name: 'USB-C Cable', description: 'Fast charging cable', price: 14.99, stock: 100, category: 'Accessories', image_url: 'http://localhost:3000/images/cable.png' },
-    { name: 'Mechanical Keyboard', description: 'RGB mechanical keyboard', price: 89.99, stock: 25, category: 'Electronics', image_url: 'http://localhost:3000/images/keyboard.png' },
-    { name: 'Monitor', description: '4K UltraHD Monitor', price: 349.99, stock: 15, category: 'Electronics', image_url: 'http://localhost:3000/images/monitor.png' },
-    { name: 'Headphones', description: 'Noise-cancelling headphones', price: 199.99, stock: 30, category: 'Audio', image_url: 'http://localhost:3000/images/headphones.png' }
+    { name: 'Laptop', description: 'High-performance laptop', price: 999.99, stock: 10, category: 'Electronics', image_url: '/images/laptop.png' },
+    { name: 'Wireless Mouse', description: 'Ergonomic wireless mouse', price: 29.99, stock: 50, category: 'Electronics', image_url: '/images/mouse.png' },
+    { name: 'USB-C Cable', description: 'Fast charging cable', price: 14.99, stock: 100, category: 'Accessories', image_url: '/images/cable.png' },
+    { name: 'Mechanical Keyboard', description: 'RGB mechanical keyboard', price: 89.99, stock: 25, category: 'Electronics', image_url: '/images/keyboard.png' },
+    { name: 'Monitor', description: '4K UltraHD Monitor', price: 349.99, stock: 15, category: 'Electronics', image_url: '/images/monitor.png' },
+    { name: 'Headphones', description: 'Noise-cancelling headphones', price: 199.99, stock: 30, category: 'Audio', image_url: '/images/headphones.png' }
   ];
 
   let inserted = 0;
